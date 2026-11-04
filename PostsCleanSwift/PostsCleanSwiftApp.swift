@@ -11,7 +11,8 @@ import SwiftUI
 struct PostsCleanSwiftApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let container = DependencyContainer()
+            PostsView(viewModel: container.makePostsViewModel())
         }
     }
 }
